@@ -26,8 +26,8 @@
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#services">Services</a>
+            <!-- <a href="#skills">Skills</a>
+            <a href="#services">Services</a> -->
             <a href="#portfolio">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -38,21 +38,22 @@
             <h3>Hello, It's Me</h3>
             <h1>Harmanjot Kaur</h1>
             <h3>And I'm a <span>Frontend Developer</span></h3>
-            <p>A Passionate Programmer And Problem Solver. Results-driven Front End Engineer with a proven track record of
+            <p>
+                A Passionate Programmer And Problem Solver. Results-driven Front End Engineer with a proven track record of
                 designing and developing intuitive and visually appealing user
                 interfaces. Adept at analyzing user requirements, implementing best
                 practices, and optimizing website performance to deliver exceptional
                 user experiences. Strong collaboration and problem-solving skills to
                 contribute to the success of cross-functional teams and drive
                 innovation in web development.
-                </p>
+            </p>
             <div class="social-media">
                 <a href="https://www.instagram.com/harmankaur_2002/" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
                 <a href="https://www.linkedin.com/in/harmanjot-kaur-4427b122a/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
                 <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzCMptTfqHQBRtQKmKCbgBMBVJdlqbLNlZsRMxwdwdzlddhlvLjzQnqZlZTwHFSVkFzzKlZ" target="_blank"><i class='bx bxl-gmail'></i></a>
                 <a href="https://github.com/harmanjot2002" target="_blank"><i class='bx bxl-github' ></i></a> 
             </div>
-            <a href="#" class="btn">Download Resume</a>
+            <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
         </div>
         <div class="home-img">
             <img src="ay.png" alt="">
@@ -101,7 +102,7 @@
             </div>
         </div>
     </section>
-
+<!-- 
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-row">
@@ -166,7 +167,7 @@
                 <a href="#" class="btn">Read More</a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="portfolio" id="portfolio">
         <h2 class="heading">Latest <span>Projects</span></h2>
@@ -183,16 +184,16 @@
                 <img src="food.png" alt="">
                 <div class="portfolio-layer">
                     <h4>Food Delivery Service</h4>
-                    <p>The website includes a gallery that features delicious food shots. This layout, full of different sized blocks, is arranged in a grid that’s easy to pull off with CSS grid in React JS.</p>
+                    <p>The website includes a gallery that features delicious food shots. This layoutis arranged in a grid that's easy to pull off with CSS grid in React JS.</p>
                     <a href="https://harman-foodies.vercel.app/" target="_blank"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="portfolio-box">
                 <img src="port.png" alt="">
                 <div class="portfolio-layer">
-                    <h4>Portfolio</h4>
-                    <p>A completely responsive portfolio website created using CSS and HTML.</p>
-                    <a href="https://harmanjot2002.github.io/Portfolio/" target="_blank"><i class='bx bx-link-external'></i></a>
+                    <h4>E-Weather</h4>
+                    <p>The weather application will provide users with real-time weather information, forecasts, and other weather-related data</p>
+                    <a href="https://e-weather-puce.vercel.app/" target="_blank"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
         </div>
@@ -202,15 +203,22 @@
         <h2 class="heading">Contact <span>Me</span></h2>
         <form action="#">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input id="name" type="text" placeholder="Full Name" required>
+                <input id="add" type="email" placeholder="Email Address" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input id="num" type="number" placeholder="Mobile Number" required>
+                <input id ="sub" type="text" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <textarea name="" id="txt" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn" onclick="openPopup()">Send Message</button>
+            <div class="popup" id="popup">
+                <img src="tick.png" alt="yellow tick">
+                <h2>Thank You!</h2>
+                <p>Your details have been submitted successfully.Thanks!</p>
+                <button type="submit" class="btn" onclick="closePopup()">OK</button>
+            </div>
+            <!-- <input type="submit" value="Send Message" class="btn"> -->
         </form>
     </section>
 
@@ -222,5 +230,36 @@
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
+
+    <script>
+        let popup=document.getElementById("popup");
+        function openPopup(){
+            let vl1 = document.getElementById("name").value;
+            if(vl1 === ""){
+                return;
+            }
+            let vl2 = document.getElementById("add").value;
+            // var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if(vl2 === ""){
+                return;
+            }
+            let vl3 = document.getElementById("num").value;
+            if(vl3 === ""){
+                return;
+            }
+            let vl4 = document.getElementById("sub").value;
+            if(vl4 === ""){
+                return;
+            }
+            let vl5 = document.getElementById("txt").value;
+            if(vl5 === ""){
+                return;
+            }
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+    </script>
 </body>
 </html>

@@ -67,9 +67,7 @@ body{
     margin-left:4rem;
     transition:.3s;
 }
-.navbar a:hover
-/* .navbar a:active */
-{
+.navbar a:hover{
     color:var(--main-color);
 }
 
@@ -102,12 +100,10 @@ span{
     font-size: 1.6rem;
 }
 .home-img img{
-    /* width: 35vw; */
     border-radius:30%;
     /* transform:rotate(8deg); */
     box-shadow:0 0 1.2rem var(--main-color);
     animation: floatImage 4s ease-in-out infinite;
-    /* box-shadow: 2px 3px 1px 3px var(--main-color); */
 }
 @keyframes floatImage{
     0%{
@@ -261,7 +257,7 @@ span{
     font-size: 1.6rem;
 }
 
-.skills{
+/* .skills{
     min-height: auto;
     padding-bottom:7rem;
     background: var(--second-bg-color);
@@ -374,7 +370,7 @@ span{
 .services-box p{
     font-size:1.6rem;
     margin:1rem 0 3rem;
-}
+} */
 
 .portfolio{
     background: var(--second-bg-color);
@@ -477,6 +473,40 @@ span{
 .contact form .btn{
     margin-top: 2rem;
     cursor: pointer;
+}
+.popup{
+    width:400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding:0 30px 30px;
+    color:#333;
+    visibility: hidden;
+    transition:transform 0.4s,top 0.4s;
+}
+.open-popup{
+    position:relative;
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%,15%);
+}
+.popup img{
+    width: 100px;
+    margin-top:-30px;
+    border-radius:50%;
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+}
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin:10px 0 10px;
+}
+.popup p{
+    font-size:14px;
 }
 
 .footer{
