@@ -257,7 +257,7 @@ span{
     font-size: 1.6rem;
 }
 
-/* .skills{
+.skills{
     min-height: auto;
     padding-bottom:7rem;
     background: var(--second-bg-color);
@@ -336,7 +336,7 @@ span{
     width:80%;
 }
 
-.services h2{
+/* .services h2{
     margin-bottom:3rem;
 }
 .services-container{
@@ -370,10 +370,10 @@ span{
 .services-box p{
     font-size:1.6rem;
     margin:1rem 0 3rem;
-} */
+}  */
 
 .portfolio{
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 .portfolio h2{
     margin-bottom: 4rem;
@@ -387,7 +387,7 @@ span{
 .portfolio-container .portfolio-box{
     position: relative;
     border-radius:2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+    box-shadow: 0 0 1rem var(--second-bg-color);
     overflow: hidden;
     display: flex;
 }
@@ -440,6 +440,9 @@ span{
 }
 
 
+.contact{
+    background: var(--second-bg-color);
+}
 .contact h2{
     margin-bottom: 3rem;
 }
@@ -460,7 +463,7 @@ span{
     padding:1.5rem;
     font-size: 1.6rem;
     color:var(--text-color);
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-radius: .8rem;
     margin:.7rem 0;
 }
@@ -515,10 +518,15 @@ span{
     align-items:center;
     flex-wrap: wrap;
     padding:2rem 9%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 .footer-text p{
     font-size: 1.6rem;
+}
+.footer-text p a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--main-color);
 }
 .footer-iconTop a{
     display: inline-flex;
