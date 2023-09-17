@@ -398,6 +398,7 @@ span{
 }
 .portfolio-box:hover img{
     transform: scale(1.1);
+    opacity: 0.3;
 }
 .portfolio-box .portfolio-layer{
     position:absolute;
@@ -419,11 +420,16 @@ span{
     transform: translateY(0);
 }
 .portfolio-layer h4{
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 .portfolio-layer p{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin: .3rem 0 1rem;
+}
+.connects{
+    display: flex;
+    gap:1rem;
+    align-items: center;
 }
 .portfolio-layer a{
     display: inline-flex;
